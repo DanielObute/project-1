@@ -1,0 +1,107 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f5f7fa;
+    font-family: Arial, sans-serif;
+  }
+  
+  .auth-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .form {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .form.active {
+    display: flex;
+  }
+  
+  input {
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  input.valid {
+    border-color: green;
+  }
+  
+  input.invalid {
+    border-color: red;
+  }
+  
+  .help-text {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: -5px;
+    margin-bottom: 10px;
+  }
+  
+  .help-text.valid {
+    color: green;
+  }
+  
+  .help-text.invalid {
+    color: red;
+  }
+  button {
+    margin-top: 1rem;
+    padding: 0.7rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+  
+  span {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Fade animation */
+  .form {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  .form.active {
+    opacity: 1;
+  }
+  
+  /* Loading spinner */
+  .loading {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Success message */
+  .success {
+    color: green;
+    text-align: center;
+    margin-top: 1rem;
+  }
